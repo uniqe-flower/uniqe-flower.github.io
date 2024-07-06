@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2024/07/06/test/"/>
+      <url>/2024/07/06/test/</url>
+      
+        <content type="html"><![CDATA[<pre><code>for i in range(10):    print(i) </code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>建立自己的Github博客网站</title>
       <link href="/2024/06/29/jian-li-blog/"/>
       <url>/2024/06/29/jian-li-blog/</url>
