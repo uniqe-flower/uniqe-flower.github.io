@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>python</title>
-      <link href="/2024/07/07/python/"/>
-      <url>/2024/07/07/python/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>): </span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><pre><code>for i in range(10):    print(i)</code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>建立自己的Github博客网站</title>
       <link href="/2024/06/29/jian-li-blog/"/>
       <url>/2024/06/29/jian-li-blog/</url>
