@@ -398,36 +398,36 @@
 <p>然后把下面这段仓库的<strong>SSH地址</strong>复制下来留着后面配置时会用到<br><img src="https://pic.imgdb.cn/item/668410e0d9c307b7e96be52a.png"></p>
 <p>之后等待即可，要访问https:&#x2F;&#x2F;用户名.github.io需十几分钟时间，你可以先从事与下一步</p>
 <h2 id="3-Hexo安装"><a href="#3-Hexo安装" class="headerlink" title="3 Hexo安装&#96;"></a>3 Hexo安装&#96;</h2><p>先在自己喜欢的磁盘空间里创建一个本地文件夹，选中创建的目录(文件夹)右键选择使用Gti Bash Here打开Git命令窗口，之后输入</p>
-<pre class="language-bash"><code class="language-bash">$ npm install -g cnpm --registry=https://registry.npmmirror.com
+<pre class="line-numbers language-bash"><code class="language-bash">$ npm install -g cnpm --registry=https://registry.npmmirror.com
 </code></pre>
 <p>之后依次再输入</p>
-<pre class="language-bash"><code class="language-bash">$ cnpm install -g hexo-cli
+<pre class="line-numbers language-bash"><code class="language-bash">$ cnpm install -g hexo-cli
 $ hexo init
 </code></pre>
 <p>第一行命运为安装hexo，第二行命令为初始化Hexo，运行成功后会出现如下文件<br><img src="https://pic.imgdb.cn/item/6684171bd9c307b7e979ae86.png"></p>
 <p>此时输入</p>
-<pre class="language-bash"><code class="language-bash">hexo s
+<pre class="line-numbers language-bash"><code class="language-bash">hexo s
 </code></pre>
 <p>hexo sever的缩写，作用是启动本地服务器，用于预览主题,浏览器输入localhost:4000即可以在本地浏览博客(自带一篇Hello World博客),如何按Ctrl+c退出<br><img src="https://pic.imgdb.cn/item/668417e1d9c307b7e97b51a3.png"></p>
 <h2 id="4-设置ssh"><a href="#4-设置ssh" class="headerlink" title="4 设置ssh"></a>4 设置ssh</h2><h3 id="1-生成ssh秘钥"><a href="#1-生成ssh秘钥" class="headerlink" title="1.生成ssh秘钥"></a>1.生成ssh秘钥</h3><p>首先在git下<br>依次输入命令</p>
-<pre class="language-bash"><code class="language-bash">ssh-keygen -t rsa -C ‘注册时的邮箱地址’
+<pre class="line-numbers language-bash"><code class="language-bash">ssh-keygen -t rsa -C ‘注册时的邮箱地址’
 </code></pre>
 <p>第一行为生成ssh秘钥（邮箱地址例如<a href="mailto:&#101;&#120;&#97;&#109;&#x70;&#x6c;&#x65;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#101;&#120;&#97;&#109;&#x70;&#x6c;&#x65;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a>）,接着去查看C盘目录(此文件夹所在C:\Users\Administrator.ssh中)，然后在记事本中打开id_rsa.put文件并复制生成的key</p>
 <h3 id="2-ssh秘钥配置"><a href="#2-ssh秘钥配置" class="headerlink" title="2.ssh秘钥配置"></a>2.ssh秘钥配置</h3><p>打开Github,在在GitHub主页的头像下找到settings,之后点击SSH and GPG keys，点击New SSH key<br><img src="https://pic.imgdb.cn/item/66841a28d9c307b7e980e7bf.png"><br>将刚刚在.ssh目录下所复制的id_rsa.put文件中的信息复制进key(注意空格)（名字随意）</p>
 <p>接着在本地绑定与Github的用户名和邮箱（git）<br>输入命令</p>
-<pre class="language-bash"><code class="language-bash">git config --global user.name “注册时用户名”
+<pre class="lline-numbers anguage-bash"><code class="language-bash">git config --global user.name “注册时用户名”
 git config --global user.email “注册时邮箱”
 </code></pre>
 <h2 id="5-上传博客"><a href="#5-上传博客" class="headerlink" title="5 上传博客"></a>5 上传博客</h2><p>首先找到之前创建仓库生成的Github仓库SSH地址(如果没有保存点击仓库主页的Clone or download可重新查看）然后打开博客文件夹下的_config.yml ,然后将文章末尾改为以下格式：<br><img src="https://pic.imgdb.cn/item/66841dc1d9c307b7e988d6f9.png"><br>接着需要安装一个上传工具<br>输入命令（git）</p>
-<pre class="language-bash"><code class="language-bash">cnpm install hexo-deployer-git
+<pre class="line-numbers language-bash"><code class="language-bash">cnpm install hexo-deployer-git
 </code></pre>
 <p>新建文章(不新建的话也会有一篇自带的Hello World文章)<br>输入命令</p>
-<pre class="language-bash"><code class="language-bash">hexo new “文章名称”
+<pre class="line-numbers language-bash"><code class="language-bash">hexo new “文章名称”
 </code></pre>
 <p>注意文章名称要为<strong>小写英文</strong>（例：my-new-post），如何用别的语言或大写的话无法正常定位网页</p>
 <p>然后根据返回的地址即可找到创建的文件位置，即可使用编辑器打开编辑(如VScode,Markdown等)</p>
 <p>编辑后就输入命令</p>
-<pre class="language-bash"><code class="language-bash">hexo g -d
+<pre class="line-numbers language-bash"><code class="language-bash">hexo g -d
 </code></pre>
 <p>其中 <strong>hexo g</strong> 为生成文件，<strong>hexo d</strong> 为部署到Github</p>
 <p>之后每次上传博客都是此顺序</p>
