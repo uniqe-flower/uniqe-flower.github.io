@@ -288,7 +288,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cnitem/6714c43cd29ded1a8c906699.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/6714c43cd29ded1a8c906699.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -375,10 +375,10 @@
                 <p><strong>bilibili-api</strong> 是一个用 <em>Python</em> 写的调用 <em>Bilibili</em> 各种 API 的库， 范围涵盖视频、音频、直播、动态、专栏、用户、番剧等。常规的关注功能并不简洁且直观，会<strong>附着一些无用的信息</strong>，这里将搭建一个获取特定UP更新视频并<strong>简洁地显示相关标题及URL</strong>的爬虫，来实现未登陆状态下或无账号状态下的另类关注功能。</p>
 <p>##1 相关工具</p>
 <h3 id="1-bilibili-api下载"><a href="#1-bilibili-api下载" class="headerlink" title="1.bilibili-api下载"></a>1.bilibili-api下载</h3><p>首先使用以下指令安装此模块：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ pip3 install bilibili-api-python
+<pre><code>$ pip3 install bilibili-api-python
 </code></pre>
 <p>然后引用模块的user功能:</p>
-<pre class="line-numbers language-bash"><code class="language-bash">from bilibili_api import user
+<pre><code>from bilibili_api import user
 </code></pre>
 <p>##2 相关函数</p>
 <p>###1.asyncio</p>
@@ -388,7 +388,7 @@
 <li><strong>协程（Coroutine）</strong>：<em>asyncio</em> 使用协程作为异步编程的基础。协程是一种特殊的函数，可以在执行过程中暂停并在稍后恢复。使用  <strong>async def</strong> 定义协程函数，并在函数内部使用 <strong>await</strong> 关键字来挂起执行</li>
 </ol>
 <p>示例:</p>
-<pre class="line-numbers language-python"><code class="language-python">#定义协程函数
+<pre><code>#定义协程函数
 async def main() -&gt; None:
     ....
 #....内容后面有提
@@ -400,7 +400,7 @@ if __name__ == &quot;__main__&quot;:
 </code></pre>
 <p>###2.time()<br><strong>time</strong> 是 <em>python</em> 的内置库，其中的 <strong>time()函数</strong> 用于返回当前时间戳（时间戳，是从1970年1月1日（UTC&#x2F;GMT的午夜）开始所经过的秒数（不考虑闰秒），用于表示一个时间点），通过新建目录下的文档读取上次使用时的时间戳并复写当前时间戳来记录（初次使用时需先填入任选的默认值），来比较视频上传时的时间戳以此返回新上传的视频信息</p>
 <p>相关代码如下:</p>
-<pre class="line-numbers language-python"><code class="language-python">import time
+<pre><code>import time
 
 current_timestamp = str(int(time.time()))
 file_path = &quot;ts.txt&quot;
@@ -423,7 +423,7 @@ with open(file_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as file:
 <li>up名     <strong>[‘media_list’][i][‘upper’][‘name’]</strong></li>
 </ol>
 <p>其中 <strong>i</strong> 为从0开始的整数，将要获取的 <em>up</em> 的 <em>uid</em> 填入 <strong>list_up</strong> 列表中来遍历获取信息，….内容的代码如下:</p>
-<pre class="line-numbers language-python"><code class="language-python">list_up = []
+<pre><code>list_up = []
 #将uid填入该列表中
 
 for uid in list_up:
@@ -445,7 +445,7 @@ for uid in list_up:
                         title+&#39; -- https://www.bilibili.com/video/&#39;+bvid)
 </code></pre>
 <p>##3 完整代码 </p>
-<pre class="line-numbers language-python"><code class="language-python">import asyncio
+<pre><code>import asyncio
 from bilibili_api import user
 import time
 
@@ -629,7 +629,7 @@ if __name__ == &quot;__main__&quot;:
                 <a href="/2024/10/21/ji-yu-bilibili-api-de-pa-chong/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cnitem/6714c43cd29ded1a8c906699.jpg" class="responsive-img" alt="基于bilibili-api搭建的获取特定UP视频更新的爬虫">
+                        <img src="https://pic.imgdb.cn/item/6714c43cd29ded1a8c906699.jpg" class="responsive-img" alt="基于bilibili-api搭建的获取特定UP视频更新的爬虫">
                         
                         <span class="card-title">基于bilibili-api搭建的获取特定UP视频更新的爬虫</span>
                     </div>
